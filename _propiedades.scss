@@ -1,0 +1,55 @@
+@import "paletadecolores";
+
+
+$mono: 'IBM Plex Mono',
+monospace;
+$sans: 'IBM Plex Sans',
+sans-serif;
+
+%titulos {
+    font-family: $sans;
+    font-size: 36px;
+    color: $primaryText;
+    letter-spacing: 0;
+    line-height: 42px;
+    font-weight: 400;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+%parrafos {
+    font-family: $mono;
+    font-size: 14px;
+    color: $primaryText;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+%botones {
+    color: $primaryText;
+    background-color: $button;
+    border-color: transparent;
+    font-family: $mono;
+    font-weight: 500;
+    width: 288px;
+    height: 48px;
+    margin: 0 16px 0 16px;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+
+%contenedor {
+    width: 320px;
+    height: 130px;
+    position: absolute;
+}
+
+%iconos {
+    width: 104px;
+    height: 104px;
+
+}

@@ -1,0 +1,394 @@
+@import "_reset";
+@import "_paletadecolores";
+@import "_propiedades";
+
+
+body {
+
+    header {
+        width: 100%;
+        height: 44px;
+        position: relative;
+        top: 0;
+        z-index: 2;
+        background-color: $primaryColor;
+
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+
+
+
+            .menu-icon {
+                padding: 22px 19px;
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+
+
+
+
+                .nav-icon {
+                    background: $primaryText;
+                    display: block;
+                    height: 2px;
+                    width: 18px;
+                    position: relative;
+                    transition: background .2s ease-out;
+
+                    &:before {
+                        background: $primaryText;
+                        content: "";
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: 5px;
+                        transition: all .2s ease-out;
+
+                    }
+
+                    &:after {
+                        background: $primaryText;
+                        content: "";
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        top: -5px;
+                        transition: all .2s ease-out;
+
+                    }
+                }
+
+            }
+
+            .menu-btn {
+                display: none;
+
+                &:checked~ul {
+                    display: block;
+                }
+
+                &:checked~.menu-icon .nav-icon {
+                    background: transparent;
+
+                    &:after {
+                        transform: rotate(-45deg);
+                        top: 0;
+                    }
+
+                    &:before {
+                        transform: rotate(45deg);
+                        top: 0;
+                    }
+
+                }
+
+                &:checked~.menu-icon .nav-icon:before {
+                    transform: rotate(45deg);
+                }
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                margin: 10px 0 10px 16px;
+                display: block;
+                position: absolute;
+                float: left;
+
+            }
+
+
+            ul {
+                position: relative;
+                top: 44px;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: none;
+                transition: display 1s ease-out;
+
+
+
+                a {
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    padding: 12px 0;
+                    outline: 1px solid #0000EC;
+                    background-color: #0000EC;
+                    color: $primaryColor;
+                    font-family: $mono;
+                    letter-spacing: 0;
+                    line-height: 28px;
+                    font-size: 16px;
+                    width: 100%;
+
+                    &:visited {
+                        color: $primaryColor;
+                    }
+
+                    li {
+                        display: inline;
+                        font-family: $mono;
+                        margin-left: 48px;
+                        text-align: center;
+
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    h1 {
+        @extend %titulos;
+        max-width: 232px;
+        position: absolute;
+        top: 73px;
+        margin: 0 16px 0 16px;
+
+
+        .tachado {
+            text-decoration: line-through;
+            color: $primaryText;
+        }
+
+    }
+
+
+    .parrafo1 {
+        @extend %parrafos;
+        margin: 0px 16px 0px 16px;
+        position: absolute;
+        top: 173px;
+        padding-top: 0px;
+        max-width: 288px;
+
+        .agregado {
+            display: none;
+        }
+    }
+}
+
+
+
+.boton1 {
+    @extend %botones;
+    position: absolute;
+    top: 275px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.episodios {
+    width: 100%;
+    height: 1203.5px;
+    position: absolute;
+    top: 347px;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+
+
+    h2 {
+        @extend %titulos;
+        color: $primaryColor;
+        position: relative;
+        top: 64px;
+        max-width: 157px;
+    }
+
+    .spotify {
+        width: 100%;
+        height: 1076.5px;
+        align-content: center;
+        position: relative;
+        top: 85px;
+        display: flex;
+        flex-direction: column;
+
+
+        iframe {
+            top: 0;
+            left: 0;
+            margin: 0 11px 11px 11px;
+            height: 232px;
+            border: none;
+
+
+        }
+
+    }
+}
+
+.phone {
+    width: 100%;
+    height: 519px;
+    position: absolute;
+    top: 1455px;
+    left: 0;
+
+}
+
+.nosotros {
+    @extend %titulos;
+    position: absolute;
+    top: 2001px;
+    max-width: 288px;
+}
+
+.entrevistas {
+    @extend %titulos;
+    position: absolute;
+    top: 2401px;
+    max-width: 288px;
+}
+
+.parrafo2 {
+    @extend %parrafos;
+    position: absolute;
+    top: 2093px;
+    max-width: 288px;
+}
+
+.invitados {
+    position: absolute;
+    top: 2499px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 243px;
+    }
+}
+
+.topicos {
+    @extend %titulos;
+    position: absolute;
+    top: 4004px;
+    max-width: 288px;
+}
+
+.iconos {
+    position: absolute;
+    top: 4125px;
+    width: 100%;
+    height: 762px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 198px 246px 214px 1fr;
+    justify-items: center;
+
+
+
+    img {
+        @extend %iconos
+    }
+}
+
+.textos {
+    position: absolute;
+    top: 4242px;
+    width: 100%;
+    height: 690px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 198px 246px 214px 1fr;
+
+    h3 {
+        font-family: $sans;
+        font-size: 24px;
+        color: $primaryText;
+        letter-spacing: 0;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.novedades {
+    width: 100%;
+    height: 341px;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 4974px;
+
+    h3 {
+        @extend %titulos;
+        color: $primaryColor;
+        text-align: center;
+        margin: 64px 16px 36px 16px;
+    }
+
+    a {
+        text-decoration: none;
+
+        .boton2 {
+            @extend %botones;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    top: 5315px;
+    width: 100%;
+    height: 121px;
+
+    p {
+        @extend %parrafos;
+        position: absolute;
+        top: 24px;
+        width: 100%;
+        max-width: 780px;
+        text-align: center;
+        margin: 0;
+
+    }
+
+    .miniconos {
+        display: grid;
+        grid-template-columns: 16px 16px 16px 16px 16px;
+        gap: 38px;
+        width: 220px;
+        height: 28px;
+        position: absolute;
+        top: 62px;
+        left: 45px;
+
+        a {
+            color: $primaryText;
+
+            &:visited {
+                color: $primaryText;
+
+            }
+            i {
+                width: 16px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 780px) {
+    @import "_desktop";
+}
